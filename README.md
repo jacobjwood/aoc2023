@@ -1,7 +1,32 @@
-# Advent of Code Rust Template
+# Advent of Code 2023 in Rust
+The following will document my descent into madness
 
-## How to use (from template)
 
-1. Generate a repo from this template with the name AOC20XX where XX is the current year. Pull it down and run make year. 
-2. Copy your cookie from AOC 20XX into a file named session_cookie.txt (this is already listed in .gitignore).
-3. In the terminal type `make day=X` where X is the day you want to run. This will create a folder for the day you specify and pull your text input for day X into the folder as well as create a python file that reads the input. For rust do `make rust day=X` which will set up a cargo project instead.
+| **Day**  | **Comments**                              |
+|----------|-------------------------------------------|
+| Day 1    |                                           |
+| Day 2    |                                           |
+| Day 3    |                                           |
+| Day 4    |                                           |
+| Day 5    |                                           |
+| Day 6    |                                           |
+| Day 7    |                                           |
+| Day 8    |                                           |
+| Day 9    |                                           |
+| Day 10   |                                           |
+| Day 11   |                                           |
+| Day 12   |                                           |
+| Day 13   |                                           |
+| Day 14   |                                           |
+| Day 15   |                                           |
+| Day 16   |                                           |
+| Day 17   |                                           |
+| Day 18   |                                           |
+| Day 19   |                                           |
+| Day 20   |                                           |
+| Day 21   |                                           |
+| Day 22   |                                           |
+| Day 23   |                                           |
+| Day 24   |                                           |
+| Day 25   |                                           |
+
