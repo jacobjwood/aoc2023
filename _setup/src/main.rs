@@ -25,7 +25,7 @@ fn main() -> std::io::Result<()> {
         .build().unwrap();
 
     // Set the URL 
-    let url = format!("https://adventofcode.com/YEAR/day/{}/input", day);
+    let url = format!("https://adventofcode.com/2023/day/{}/input", day);
 
     // Get response from URL
     let resp = client
