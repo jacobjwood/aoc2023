@@ -8,11 +8,6 @@ fn main() {
     let contents = fs::read_to_string(file_path)
         .expect("Should have been able to read the file");
     
-    let part1_string_numbers = contents.lines().map(|l| l.chars().filter(|c| c.is_numeric()).collect::<String>()).collect::<Vec<String>>();
-    let part1_first_char_iter = part1_string_numbers.iter().map(|s| s.chars().nth(0).unwrap().to_string());
-    let part1_last_char_iter = part1_string_numbers.iter().map(|s| s.chars().nth(s.len() - 1).unwrap().to_string());
-    let part1: i32 = std::iter::zip(part1_first_char_iter, part1_last_char_iter).map(|(l1, l2)| (l1 + &l2).parse::<i32>().unwrap()).sum();
-
     let part1_one_liner : i32 =  contents.lines().map(|l| l.chars().filter(|c| c.is_numeric()).collect::<String>()).map(|s| (s.chars().nth(0).unwrap().to_string() + &s.chars().rev().nth(0).unwrap().to_string()).parse::<i32>().unwrap()).sum();
     println!("Part 1: {}", part1_one_liner);
 
