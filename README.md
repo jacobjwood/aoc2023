@@ -4,7 +4,7 @@ The following will document my descent into madness
 
 | **Day**  | **Comments**                              |
 |----------|-------------------------------------------|
-| Day 1    |                                           |
+| Day 1    | I miss python string indexing             |
 | Day 2    |                                           |
 | Day 3    |                                           |
 | Day 4    |                                           |
