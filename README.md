@@ -7,7 +7,7 @@ The following will document my descent into madness
 | Day 1    | I miss python string indexing             |
 | Day 2    | My input parsing ability leaves a lot to be desired...                                         |
 | Day 3    | I would rather just forget about today...                                  |
-| Day 4    |                                           |
+| Day 4    |            Finally some good food.             |
 | Day 5    |                                           |
 | Day 6    |                                           |
 | Day 7    |                                           |
