@@ -8,8 +8,8 @@ The following will document my descent into madness
 | Day 2    | My input parsing ability leaves a lot to be desired...                                         |
 | Day 3    | I would rather just forget about today...                                  |
 | Day 4    |            Finally some good food.             |
-| Day 5    |                                           |
-| Day 6    |                                           |
+| Day 5    |                     Awful.                      |
+| Day 6    |                       Up the mathematics                    |
 | Day 7    |                                           |
 | Day 8    |                                           |
 | Day 9    |                                           |
