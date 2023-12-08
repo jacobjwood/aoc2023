@@ -10,8 +10,8 @@ The following will document my descent into madness
 | Day 4    |            Finally some good food.             |
 | Day 5    |                     Awful.                      |
 | Day 6    |                       Up the mathematics                    |
-| Day 7    |                                           |
-| Day 8    |                                           |
+| Day 7    |                       Can't believe I actually used structs and traits. Still don't understand lifetimes on trait implementations though...           |
+| Day 8    |       What's LCM and what's a naming convention                                    |
 | Day 9    |                                           |
 | Day 10   |                                           |
 | Day 11   |                                           |

@@ -17,8 +17,8 @@ fn main() {
 
     let mut hand_vec: Vec<ParsedHand> = Vec::new();
 
-    for (hand, wager) in hand_wagers {
-        hand_vec.push(hand_type(hand, wager));
+    for (hand, wager) in &hand_wagers {
+        hand_vec.push(hand_type(hand, *wager));
     }
 
     hand_vec.sort_by(|a, b| a.cmp(&b));
@@ -27,6 +27,22 @@ fn main() {
 
     let part1: usize = hand_vec.iter().enumerate().map(|(i, h)| h.wager * (i + 1)).sum();
     println!("Part 1: {}", part1);
+
+    let mut hand_vec: Vec<ParsedHand> = Vec::new();
+
+    for (hand, wager) in &hand_wagers {
+        hand_vec.push(hand_type_pt2(hand, *wager));
+    }
+
+    hand_vec.sort_by(|a, b| a.cmp(&b));
+
+    println!("{:?}", hand_vec);
+
+    let part2: usize = hand_vec.iter().enumerate().map(|(i, h)| h.wager * (i + 1)).sum();
+    println!("Part 2: {}", part2);
+
+
+
 
 
 }
@@ -73,7 +89,73 @@ fn hand_type(hand: &str, wager: usize) -> ParsedHand {
         ('4', 4),
         ('3', 3),
         ('2', 2),
-        ('1', 1),
+    ]);
+
+    let card_values = hand.chars().map(|h| *value_map.get(&h).unwrap()).collect::<Vec<usize>>();
+
+    println!("{:?} {:?}", hand_type, card_values);
+
+    let parsed_hand = ParsedHand{ hand: hand, wager: wager, hand_type: hand_type.0, value: hand_type.1, card_values: card_values };
+
+    println!("{:?}", parsed_hand);
+
+    parsed_hand
+
+
+}
+
+fn hand_type_pt2(hand: &str, wager: usize) -> ParsedHand {
+
+    let mut handmap: HashMap<char, usize> = HashMap::new();
+    
+    for card in hand.chars() {
+
+        match handmap.get(&card) {
+            Some(count) => handmap.insert(card, count+1),
+            None => handmap.insert(card, 1),
+        };
+
+    }
+
+    let mut card_counts = handmap.iter().map(|(k, v)| (*k, *v)).collect::<Vec<(char, usize)>>();
+    let mut non_j = card_counts.iter().filter(|(k, _)| *k != 'J').map(|(_, v)| *v).collect::<Vec<usize>>();
+    let j = card_counts.iter().filter(|(k, _)| *k == 'J').map(|(_, v)| *v).collect::<Vec<usize>>();
+
+    // Shouldn't always add to the highest number?
+    non_j.sort_by(|a, b| b.cmp(&a));
+
+    if non_j.len() == 0 {
+        non_j = j;
+    } else if j.len() != 0 {
+        non_j[0] += j[0];
+    }
+    println!("{:?}", card_counts);
+
+    let hand_type = match non_j[..] {
+        [5] => ("five of a kind", 7),
+        [4, 1] => ("four of a kind", 6),
+        [3, 2] => ("full house", 5),
+        [3, 1, 1] => ("three of a kind", 4),
+        [2, 2, 1] => ("two pair", 3),
+        [2, 1, 1, 1] => ("one pair", 2),
+        [1, 1, 1, 1, 1] => ("high card", 1),
+        _ => ("jeff", 1), // should never get here
+    };
+
+    let value_map = HashMap::from([
+        ('A', 14),
+        ('K', 13),
+        ('Q', 12),
+        ('T', 10),
+        ('9', 9),
+        ('8', 8),
+        ('7', 7),
+        ('6', 6),
+        ('5', 5),
+        ('4', 4),
+        ('3', 3),
+        ('2', 2),
+        ('J', 1),
     ]);
 
     let card_values = hand.chars().map(|h| *value_map.get(&h).unwrap()).collect::<Vec<usize>>();
