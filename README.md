@@ -12,9 +12,9 @@ The following will document my descent into madness
 | Day 6    |                       Up the mathematics                    |
 | Day 7    |                       Can't believe I actually used structs and traits. Still don't understand lifetimes on trait implementations though...           |
 | Day 8    |       What's LCM and what's a naming convention                                    |
-| Day 9    |                                           |
-| Day 10   |                                           |
-| Day 11   |                                           |
+| Day 9    |                       easy sequences                    |
+| Day 10   |                     Praise be rule based debugging                    |
+| Day 11   |         OFF BY ONE ERRORS!!!!                                  |
 | Day 12   |                                           |
 | Day 13   |                                           |
 | Day 14   |                                           |
